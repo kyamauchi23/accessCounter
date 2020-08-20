@@ -1,7 +1,5 @@
-package com.ffg.accessCounter.service;
+package com.ffg.accesscounter.service;
 
-import com.ffg.accessCounter.repository.CountRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service

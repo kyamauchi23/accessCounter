@@ -1,6 +1,6 @@
-package com.ffg.accessCounter.service;
+package com.ffg.accesscounter.service;
 
-import com.ffg.accessCounter.repository.CountRepository;
+import com.ffg.accesscounter.repository.CountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -8,9 +8,11 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class CountServiceImpl implements CountService{
 
-    @Autowired
-    CountRepository countRepository;
+    private final CountRepository countRepository;
 
+    public CountServiceImpl(CountRepository countRepository){
+        this.countRepository=countRepository;
+    }
 
     @Override
     public int returnAccessCounter(Integer id) {

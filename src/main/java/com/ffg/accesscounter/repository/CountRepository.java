@@ -1,6 +1,6 @@
-package com.ffg.accessCounter.repository;
+package com.ffg.accesscounter.repository;
 
-import com.ffg.accessCounter.entity.Count;
+import com.ffg.accesscounter.entity.Count;
 import org.springframework.data.jdbc.repository.query.Modifying;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.jdbc.repository.query.Query;

@@ -1,6 +1,6 @@
-package com.ffg.accessCounter.controller;
+package com.ffg.accesscounter.controller;
 
-import com.ffg.accessCounter.service.CountServiceImpl;
+import com.ffg.accesscounter.service.CountServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
@@ -8,8 +8,11 @@ import org.springframework.web.servlet.ModelAndView;
 @RestController
 public class AccessCounterController {
 
-    @Autowired
-    CountServiceImpl countService;
+    private final CountServiceImpl countService;
+
+    public AccessCounterController(CountServiceImpl countService){
+        this.countService=countService;
+    }
 
     @GetMapping
     private ModelAndView returnAccessCounter(ModelAndView mav){
@@ -17,7 +20,7 @@ public class AccessCounterController {
         countService.addAccessCounter(1);
 
         mav.addObject("accessCount",accessCount);
-        mav.setViewName("/counter.html");
+        mav.setViewName("/counter");
         return mav;
     }
 }

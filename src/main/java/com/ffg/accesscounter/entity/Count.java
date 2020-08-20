@@ -1,4 +1,4 @@
-package com.ffg.accessCounter.entity;
+package com.ffg.accesscounter.entity;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;
