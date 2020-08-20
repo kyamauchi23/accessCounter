@@ -11,7 +11,7 @@ public class AccessCounterController {
     @Autowired
     CountServiceImpl countService;
 
-    @RequestMapping("/")
+    @GetMapping
     private ModelAndView returnAccessCounter(ModelAndView mav){
         int accessCount = countService.returnAccessCounter(1);
         countService.addAccessCounter(1);
