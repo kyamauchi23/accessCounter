@@ -10,9 +10,9 @@ import org.springframework.stereotype.Repository;
 public interface CountRepository extends CrudRepository<Count,Integer>{
 
     @Query("select count from count where id = id")
-    int findByAccessCounter(int id);
+    int findByAccessCounter(Integer id);
 
     @Modifying
     @Query("update count set count = count + 1 where id = id")
-    void updateAccessCounter(int id);
+    void updateAccessCounter(Integer id);
 }

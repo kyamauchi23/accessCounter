@@ -13,14 +13,13 @@ public class CountServiceImpl implements CountService{
 
 
     @Override
-    public int returnAccessCounter(int id) {
-        int count = countRepository.findByAccessCounter(id);
-        return count;
+    public int returnAccessCounter(Integer id) {
+        return countRepository.findByAccessCounter(id);
     }
 
     @Override
     @Transactional
-    public void addAccessCounter(int id){
+    public void addAccessCounter(Integer id){
         countRepository.updateAccessCounter(id);
     }
 }

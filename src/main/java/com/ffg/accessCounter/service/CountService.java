@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 @Service
 public interface CountService {
 
-    public int returnAccessCounter(int id);
+    public int returnAccessCounter(Integer id);
 
-    public void addAccessCounter(int id);
+    public void addAccessCounter(Integer id);
 }
